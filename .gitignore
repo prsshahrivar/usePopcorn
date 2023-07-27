@@ -1,0 +1,7 @@
+
+# Ignore Node Modules ; It can be Downloaded from package.json File Data.
+
+node_modules/
+.idea/
+/.DS_Store
+/package-lock.json
