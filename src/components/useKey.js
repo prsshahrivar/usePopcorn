@@ -15,7 +15,7 @@ export function useKey(key, action){
 
         document.addEventListener("keydown", callback)
 
-
+        // CleanUp Function
         return function () {
             document.removeEventListener("keydown", callback)
         }

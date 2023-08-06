@@ -20,11 +20,11 @@ export default function App() {
     // These Are Returning from useMovies.js
     const {movies, error, isLoading} = useMovies(query)
 
-    // const [watched, setWatched] = useState([]);
-    const [watched, setWatched] = useState(function () {
-        const storedValue = localStorage.getItem('watched');
-        return JSON.parse(storedValue);
-    });
+    const [watched, setWatched] = useState([]);
+    // const [watched, setWatched] = useState(function () {
+    //     const storedValue = localStorage.getItem('watched');
+    //     return JSON.parse(storedValue);
+    // });
 
 
     // Fetching to API with Search Query
