@@ -2,6 +2,7 @@ import {useState, useEffect, useRef} from "react";
 import StarRating from "./StarRating";
 import {useMovies} from "./useMovies";
 import {useKey} from "./useKey";
+import {useLocalStorageState} from "./uselocalStorageState";
 
 
 const average = (arr) =>
@@ -20,7 +21,11 @@ export default function App() {
     // These Are Returning from useMovies.js
     const {movies, error, isLoading} = useMovies(query)
 
-    const [watched, setWatched] = useState([]);
+
+    const [watched, setWatched] = useLocalStorageState([], "watched")
+
+    // const [watched, setWatched] = useState([]);
+
     // const [watched, setWatched] = useState(function () {
     //     const storedValue = localStorage.getItem('watched');
     //     return JSON.parse(storedValue);
@@ -51,11 +56,7 @@ export default function App() {
 
     }
 
-    useEffect(function () {
 
-        localStorage.setItem('watched', JSON.stringify(watched));
-
-    }, [watched])
 
 
     return (

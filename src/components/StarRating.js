@@ -27,11 +27,11 @@ StarRating.propTypes = {
 
 export default function StarRating({
                                        maxRating = 5,
+                                       defaultRating = 0,
+                                       className = "",
                                        color = '#fcc419',
                                        size = 32,
-                                       className = "",
                                        messages = [],
-                                       defaultRating = 0,
                                        onSetRating,
                                    }) {
 
@@ -108,6 +108,8 @@ function Star({onRate, onHoverIn, onHoverOut, full, size, color}) {
                />
            </svg>
 
+
+           // Not Full
            :
 
            <svg
