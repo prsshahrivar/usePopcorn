@@ -2,7 +2,7 @@ import {useState, useEffect, useRef} from "react";
 import StarRating from "./StarRating";
 import {useMovies} from "./useMovies";
 import {useKey} from "./useKey";
-import {useLocalStorageState} from "./uselocalStorageState";
+import {useLocalStorageState} from "./useLocalStorageState";
 
 
 const average = (arr) =>
